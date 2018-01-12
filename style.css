@@ -1,7 +1,7 @@
 
 .right { float: right; }
-/*.red { color: #FF5049 !important; }*/
-/*.red-focus:focus { border: 1px solid #FF5049 !important; }*/
+.red { color: #FF5049 !important; }
+.red-focus:focus { border: 1px solid #FF5049 !important; }
 
 
 
@@ -180,7 +180,7 @@ body {
 .add-btn:focus { outline: none; }
 
 
-
+/**** List *****/
 .container {
   width: 1000Px;
   margin: 60px auto;
@@ -211,6 +211,86 @@ h2 {
   margin-bottom: 15px;
   font-weight: 400;
 }
+
+.item {
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.item-description {
+  float: left;
+}
+
+.item-value {
+  float: left;
+  transition: transform 0.3s;
+}
+
+.item-percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.income .item-value,
+.income .item-delete-btn {
+    color: #28B9B5;
+}
+
+.expenses .item-value,
+.expenses .item-percentage,
+.expenses .item-delete-btn {
+    color: #FF5049;
+}
+
+
+.item-delete {
+    float: left;
+}
+
+.item-delete-btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item-delete-btn:focus { outline: none; }
+.item-delete-btn:active { transform: translateY(2px); }
+
+.item:hover .item-delete-btn { display: block; }
+.item:hover .item-value { transform: translateX(-20px); }
+.item:hover .item-percentage { transform: translateX(-20px); }
+
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #FF5049;
+
+}
+
+.unpaid .item-percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+.unpaid:hover .item-description { font-weight: 900; }
+
+
+
+
+
+
 
 
 
